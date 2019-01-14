@@ -10,5 +10,6 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1E9377A2BA9EF27F
 RUN apt update
 RUN apt install wget -y
 RUN wget https://raw.githubusercontent.com/wireshark/wireshark/master/tools/debian-setup.sh
+RUN chmod +x debian-setup.sh
 RUN ./debian-setup.sh --install-optional --install-dep-deps --install-test-deps gcc-4.9 g++-4.9 gcc-5 g++-5 gcc-6 g++-6 gcc-7 g++-7 gcc-8 g++-8 clang-5.0 clang-6.0 clang-7
 RUN apt upgrade -y

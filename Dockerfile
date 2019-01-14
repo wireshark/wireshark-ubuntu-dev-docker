@@ -1,4 +1,5 @@
 FROM ubuntu:18.04
+RUN apt update
 RUN apt install gnupg -y
 RUN echo "deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial main" > /etc/apt/sources.list.d/clang.list
 RUN echo "deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-6.0 main" > /etc/apt/sources.list.d/clang6.list

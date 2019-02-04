@@ -10,5 +10,6 @@ RUN apt update \
 	&& apt upgrade -y \
 	&& chmod +x debian-setup.sh \
 	&& sed -i 's/debhelper//g' debian-setup.sh \
-	&& ./debian-setup.sh -y --install-optional --install-deb-deps --install-test-deps gcc-5 g++-5 gcc-6 g++-6 gcc-7 g++-7 gcc-8 g++-8 clang-5.0 clang-6.0 clang-7 \
+	&& ./debian-setup.sh -y --install-optional --install-deb-deps --install-test-deps gcc-4.8 g++-4.8 gcc-5 g++-5 \
+		gcc-6 g++-6 gcc-7 g++-7 gcc-8 g++-8 clang-5.0 clang-6.0 clang-7 \
 	&& rm -rf /var/lib/apt/lists/

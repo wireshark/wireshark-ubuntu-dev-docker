@@ -2,8 +2,8 @@ FROM ubuntu:18.04
 ADD https://raw.githubusercontent.com/wireshark/wireshark/master/tools/debian-setup.sh /
 RUN apt update \
 	&& apt install gnupg apt-utils ca-certificates -y \
-	&& echo "deb http://apt.llvm.org/bionic/ llvm-toolchain-bionic-7 main" > /etc/apt/sources.list.d/clang7.list \
-	&& echo "deb http://apt.llvm.org/bionic/ llvm-toolchain-bionic-8 main" > /etc/apt/sources.list.d/clang8.list \
+	&& echo "deb https://apt.llvm.org/bionic/ llvm-toolchain-bionic-7 main" > /etc/apt/sources.list.d/clang7.list \
+	&& echo "deb https://apt.llvm.org/bionic/ llvm-toolchain-bionic-8 main" > /etc/apt/sources.list.d/clang8.list \
 	&& apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 6084F3CF814B57C1CF12EFD515CF4D18AF4F7421 \
 	&& apt update \
 	&& apt upgrade -y \

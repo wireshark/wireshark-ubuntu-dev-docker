@@ -10,7 +10,6 @@ RUN apt-get update \
 	&& ./debian-setup.sh -y --install-optional --install-deb-deps --install-test-deps \
 		--no-install-recommends build-essential fakeroot \
 		python3-pytest-xdist locales \
-		gcc-5 g++-5 \
-		gcc-8 g++-8 \
+		gcc-7 g++-7 \
 		clang-10 \
 	&& rm -rf /var/lib/apt/lists/
